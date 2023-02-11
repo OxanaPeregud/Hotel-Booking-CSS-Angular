@@ -1,0 +1,47 @@
+<div class="contacts-wrapper">
+  <div class="contact center">
+    <span>Questions? Need Help?</span>
+    <span><a href="tel:+123-456-1500">Call us on (+123) 456 1500</a></span>
+    <span class="flex-spacer"></span>
+    <img src="assets/images/gift.svg" alt="Gift">
+    <span><a href="#">BTP Gift Card</a></span>
+    <img src="assets/images/star.svg" alt="Star">
+    <span><a href="#">Loyalty Program</a></span>
+  </div>
+</div>
+
+<div class="logo-wrapper">
+  <div class="header-logo center">
+    <div class="logo">
+      Best <span>tour</span> plan
+    </div>
+    <form class="search-form">
+      <mat-form-field class="search-full-width" floatLabel="never">
+        <mat-label>Search Location</mat-label>
+        <input type="text"
+               matInput
+               [formControl]="myControl">
+      </mat-form-field>
+    </form>
+    <a mat-button class="search-img" (click)="search()">
+      <img src="assets/images/search.svg" width="16" height="16" alt="Search">
+    </a>
+    <a mat-button class="cart">
+      <mat-icon matBadge="2" matBadgeColor="warn">shopping_cart</mat-icon>
+    </a>
+    <span class="flex-spacer"></span>
+    <a class="sign-in" mat-button>Sign in</a>
+  </div>
+</div>
+
+<mat-toolbar>
+  <div class="center">
+    <a mat-button routerLink='/home' routerLinkActive='active'>All Deals</a>
+    <a mat-button routerLink='/hotels' routerLinkActive='active'>Hotels</a>
+    <a mat-button routerLink='#' routerLinkActive='active'>Activities</a>
+    <a mat-button routerLink='#' routerLinkActive='active'>Hotel Day Packages</a>
+    <a mat-button routerLink='#' routerLinkActive='active'>Restaurants</a>
+    <a mat-button routerLink='#' routerLinkActive='active'>Events</a>
+    <a mat-button routerLink='#' routerLinkActive='active'>Rodrigues</a>
+  </div>
+</mat-toolbar>
