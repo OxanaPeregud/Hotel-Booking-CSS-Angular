@@ -1,0 +1,192 @@
+.hotel-info-container {
+  background-color: #F5FAFE;
+  width: 100%;
+  height: 630px;
+}
+
+.hotel-items {
+  display: flex;
+  justify-content: space-between;
+  height: 450px;
+  margin-top: -144px;
+  float: left;
+  margin-left: 165px;
+}
+
+.booking-wrapper {
+  background-color: #0A223D;
+  border-radius: 8px;
+  padding: 29px 29px 26px 26px;
+  margin-bottom: 27px;
+}
+
+.booking-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-items span {
+  font-family: 'Nunito', sans-serif;
+  color: #FFFFFF;
+}
+
+.booking-items-left span:first-child {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.booking-items-left span:nth-child(2) {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.booking-items-left span:nth-child(3) {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking-items-left span:nth-child(4) {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 9px;
+}
+
+.booking-items-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-items-right div {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.user {
+  margin-bottom: 8px;
+}
+
+.user img {
+  margin-right: 9px;
+  vertical-align: sub;
+}
+
+.home img {
+  margin-right: 14px;
+  vertical-align: sub;
+}
+
+.phone {
+  margin-top: 32px;
+}
+
+.phone img {
+  margin-right: 8px;
+  vertical-align: center;
+}
+
+.phone span a {
+  font-size: 18px;
+  line-height: 25px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.other-options {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  padding: 13px 84px;
+  margin-top: 17px;
+}
+
+.booking-background {
+  height: 120px;
+  width: 70%;
+  float: right;
+  background-color: #FFFFFF;
+  margin-top: 24px;
+}
+
+.hotel-path {
+  font-family: 'Muli Regular', sans-serif;
+  font-size: 10px;
+  line-height: 13px;
+  color: #0A223D;
+  padding-top: 18px;
+  padding-bottom: 19px;
+}
+
+.hotel-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.hotel-title-wrapper {
+  display: flex;
+}
+
+.hotel-title-wrapper div:last-child {
+  align-self: center;
+}
+
+.main-title {
+  font-family: 'Muli Bold', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333333;
+  margin-right: 14px;
+}
+
+.subtitle {
+  font-family: 'Muli Regular', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #333333;
+}
+
+.flash-offer {
+  font-family: 'Muli SemiBold', sans-serif;;
+  font-size: 10px;
+  line-height: 13px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  border-radius: 3px;
+  padding: 3px 9px 4px 9px;
+}
+
+.hotel-title-right {
+  background: #EC1F46;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+  width: 65px;
+  height: 40px;
+}
+
+.hotel-title-right span:first-child {
+  font-family: 'Muli SemiBold', sans-serif;
+  font-size: 8px;
+  line-height: 10px;
+  color: #FFFFFF;
+}
+
+.hotel-title-right span:nth-child(3) {
+  font-family: 'Muli Bold', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+.hotel-title-right span:last-child {
+  font-family: 'Muli SemiBold', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}

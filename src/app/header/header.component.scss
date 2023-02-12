@@ -5,7 +5,7 @@ mat-toolbar {
 }
 
 mat-toolbar a {
-  font-family: 'Muli Bold', serif;
+  font-family: 'Muli Bold', sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -56,7 +56,7 @@ mat-toolbar a.active {
 }
 
 .search-form mat-label, .search-form mat-form-field {
-  font-family: 'Muli Regular', serif;
+  font-family: 'Muli Regular', sans-serif;
   font-size: 12px;
   line-height: 15px;
   color: #333333;
@@ -84,7 +84,7 @@ mat-toolbar a.active {
 
 
 .sign-in {
-  font-family: 'Muli Regular', serif;
+  font-family: 'Muli Regular', sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #F5FAFE;
@@ -105,7 +105,7 @@ mat-toolbar a.active {
 
 .contact span, .contact span a {
   align-self: center;
-  font-family: 'Muli Regular', serif;
+  font-family: 'Muli Regular', sans-serif;
   font-size: 10px;
   line-height: 13px;
   color: #333333;
@@ -113,7 +113,7 @@ mat-toolbar a.active {
 }
 
 .contact span:first-child {
-  font-family: 'Muli Bold', serif;
+  font-family: 'Muli Bold', sans-serif;
   margin-right: 5px;
 }
 

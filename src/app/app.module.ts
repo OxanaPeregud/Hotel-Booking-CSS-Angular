@@ -16,13 +16,15 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HotelInfoComponent} from './hotel-info/hotel-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    HotelsComponent
+    HotelsComponent,
+    HotelInfoComponent
   ],
   imports: [
     BrowserModule,
