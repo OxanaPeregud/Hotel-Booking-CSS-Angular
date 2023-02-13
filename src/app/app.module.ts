@@ -17,6 +17,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HotelInfoComponent} from './hotel-info/hotel-info.component';
+import {HotelDetailsComponent} from './hotel-details/hotel-details.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {HotelInfoComponent} from './hotel-info/hotel-info.component';
     HeaderComponent,
     HomeComponent,
     HotelsComponent,
-    HotelInfoComponent
+    HotelInfoComponent,
+    HotelDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {HotelInfoComponent} from './hotel-info/hotel-info.component';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

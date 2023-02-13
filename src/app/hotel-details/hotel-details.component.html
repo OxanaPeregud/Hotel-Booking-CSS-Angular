@@ -1,0 +1,220 @@
+<div class="hotel-details-wrapper">
+
+  <mat-toolbar>
+    <div class="center">
+      <a *ngIf="activeTab == 1" mat-button class="active-tab" (click)="setActiveTab(1)">Package Summery</a>
+      <a *ngIf="activeTab != 1" mat-button (click)="setActiveTab(1)">Package Summery</a>
+      <a *ngIf="activeTab == 2" mat-button class="active-tab" (click)="setActiveTab(2)">Hotel Information</a>
+      <a *ngIf="activeTab != 2" mat-button (click)="setActiveTab(2)">Hotel Information</a>
+      <a mat-button>Rooms</a>
+      <a mat-button>Facilities & Activities</a>
+      <a mat-button>Dining & Entertainment</a>
+      <a mat-button>Reviews</a>
+      <a mat-button>Questions & Answers</a>
+    </div>
+  </mat-toolbar>
+
+  <div class="package-wrapper center">
+    <div>
+      <h2>Package Summery</h2>
+      <div class="package-title">
+        Package Highlights
+      </div>
+      <div class="package-details">
+        <div class="package-column-left">
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Half Board/ All Inclusive</div>
+          </div>
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Child Under 11 Years Stay Free</div>
+          </div>
+          <div class="package-item last-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>LUX* Me Spa</div>
+          </div>
+        </div>
+        <div class="package-column-right">
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Luxurious 5-Star Hotel</div>
+          </div>
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Banyan An Adult Only Zone</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="up-package">
+      <div class="package-title">
+        Offer Details
+      </div>
+      <div class="package-details">
+        <div class="benefit-wrapper">
+          <div>
+            <img src="assets/images/check.svg" alt="Check">
+            <span class="benefit">Benefit from a special discounted CHILL’OUT OFFER at Grand Hilton Hotel.</span>
+          </div>
+          <div class="valid">* Valid until 30 April 2020</div>
+        </div>
+        <div class="calendar">
+          <img src="assets/images/calendar.svg" alt="Calendar">
+          <span>10th March - 30th April 2020</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom-package center">
+    <div class="package-title">
+      Package Summery Details
+    </div>
+
+    <div class="package-details bottom-details">
+      <div class="package-column-left">
+        <div class="package-item">
+          <div class="package-subtitle">Purchase Inclusions</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Room as per selection</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Half Board or All Inclusive Meal Plan</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Complimentary Land & Water activities</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Child Under 11 years old stays free</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Free Wi-Fi</div>
+        </div>
+        <div class="package-item last-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Free Secure Parking</div>
+        </div>
+      </div>
+
+      <div class="package-column-right bottom-right">
+        <div class="package-item">
+          <div class="package-subtitle">Complimentary Land Based Activities</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Gym</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Beach Volley</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Table tennis</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Soccer balls</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Yoga</div>
+        </div>
+        <div class="package-item last-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Unlimited access to driving range</div>
+        </div>
+      </div>
+
+      <div class="package-column-right last-bottom-right">
+        <div class="package-item">
+          <div class="package-subtitle">Complimentary Water Based Activities</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Water skiing</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Windsurfing</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Pedal boats</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Kayaking</div>
+        </div>
+        <div class="package-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Aqua Gym</div>
+        </div>
+        <div class="package-item last-item">
+          <img src="assets/images/check.svg" alt="Check">
+          <div>Glass bottom boat trips</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div>
+
+      <div class="package-details bottom-details">
+        <div class="package-column-left">
+          <div class="package-item">
+            <div class="package-subtitle">Meal Plan Available</div>
+          </div>
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Half Board</div>
+          </div>
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>All Inclusive</div>
+          </div>
+        </div>
+        <div class="package-column-right bottom-right-exc">
+          <div class="package-item">
+            <div class="package-subtitle">Entertainment</div>
+          </div>
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Live music</div>
+          </div>
+          <div class="package-item last-pack-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>DJ & Mauritian Dance Show</div>
+          </div>
+        </div>
+
+        <div class="package-column-right last-bottom-right-exc">
+          <div class="package-item">
+            <div class="package-subtitle">Check In & Check Out</div>
+          </div>
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Check In Time 14:00</div>
+          </div>
+          <div class="package-item">
+            <img src="assets/images/check.svg" alt="Check">
+            <div>Check Out Time 11:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+</div>
