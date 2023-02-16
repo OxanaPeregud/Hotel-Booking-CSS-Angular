@@ -19,6 +19,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HotelInfoComponent} from './hotel-info/hotel-info.component';
 import {HotelDetailsComponent} from './hotel-details/hotel-details.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {PackagesInfoComponent} from './packages-info/packages-info.component';
+import {FlashOfferBannerComponent} from './flash-offer-banner/flash-offer-banner.component';
+import {ReviewsSliderComponent} from './reviews-slider/reviews-slider.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import {MatTabsModule} from "@angular/material/tabs";
     HomeComponent,
     HotelsComponent,
     HotelInfoComponent,
-    HotelDetailsComponent
+    HotelDetailsComponent,
+    PackagesInfoComponent,
+    FlashOfferBannerComponent,
+    ReviewsSliderComponent
   ],
   imports: [
     BrowserModule,

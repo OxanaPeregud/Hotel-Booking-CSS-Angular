@@ -1,0 +1,27 @@
+.large-banner {
+  position: absolute;
+  font-family: 'Muli SemiBold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  border-radius: 0 4px 4px 0;
+  width: 95px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 7px 0;
+}
+
+.small-banner {
+  position: absolute;
+  font-family: 'Muli SemiBold', sans-serif;
+  font-size: 8px;
+  line-height: 10px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  border-radius: 0 4px 4px 0;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  padding: 4px 0;
+}
