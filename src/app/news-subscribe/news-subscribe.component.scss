@@ -1,0 +1,74 @@
+.subscribe-container {
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+.subscribe-top {
+  width: 100%;
+  height: 260px;
+  background-color: rgba(10, 34, 61, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.subscribe-wrapper {
+  padding: 98px 355px 87px 354px;
+  display: flex;
+}
+
+.subscribe-form {
+  max-width: 285px;
+  width: 100%;
+  height: 55px;
+  align-self: center;
+  margin-left: 139px;
+  background-color: #FFFFFF;;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-form mat-label, .subscribe-form mat-form-field {
+  font-family: 'Muli Light', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+input#mat-input-1 {
+  margin-left: 10px;
+  color: #000;
+}
+
+.mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button {
+  line-height: 0;
+}
+
+.send span {
+  font-family: 'Muli Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  padding: 18px;
+  align-self: center;
+  border-radius: 0 4px 4px 0;
+  margin-left: -20px;
+}
+
+.subtitle {
+  font-family: 'Muli Light', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.title {
+  font-family: 'Muli SemiBold', sans-serif;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}

@@ -2,6 +2,7 @@
   background-color: #F5FAFE;
   width: 100%;
   height: 630px;
+  padding-bottom: 30px;
 }
 
 .hotel-items {
@@ -83,7 +84,6 @@
 
 .phone img {
   margin-right: 8px;
-  vertical-align: center;
 }
 
 .phone span a {
@@ -130,8 +130,13 @@
   margin-top: 23px;
 }
 
+.hotel-title-left {
+  width: 728px;
+}
+
 .hotel-title-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .hotel-title-wrapper div:last-child {
@@ -153,14 +158,19 @@
   color: #333333;
 }
 
-.flash-offer {
+.view-btn {
   font-family: 'Muli SemiBold', sans-serif;;
-  font-size: 10px;
-  line-height: 13px;
+  font-size: 18px;
+  line-height: 14px;
   color: #FFFFFF;
   background-color: #EC1F46;
   border-radius: 3px;
-  padding: 3px 9px 4px 9px;
+  padding: 14px 19px;
+}
+
+.view-btn span {
+  margin-left: 16px;
+  vertical-align: 1px;
 }
 
 .hotel-title-right {

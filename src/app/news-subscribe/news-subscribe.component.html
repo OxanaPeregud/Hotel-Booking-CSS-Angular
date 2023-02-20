@@ -1,0 +1,32 @@
+<div class="subscribe-container">
+
+  <img src="assets/images/subscribe-back.png" alt="Subscribe">
+
+  <div class="subscribe-top">
+    <div class="subscribe-wrapper">
+      <div>
+        <div class="subtitle">subscribe to our</div>
+        <div class="title">Newsletter</div>
+      </div>
+
+      <form novalidate [formGroup]="form" class="subscribe-form">
+        <mat-form-field floatLabel="never">
+          <mat-label>Your email address</mat-label>
+          <input formControlName="email" matInput>
+        </mat-form-field>
+        <mat-error *ngIf="formErrors.email">
+          {{formErrors.email}}
+        </mat-error>
+      </form>
+
+      <button class="send" type="submit" mat-stroked-button
+              [disabled]="form.invalid"
+              (click)="openMessagePopup('Thank you for subscribing to our newsletter!')">
+        <span>Send</span>
+      </button>
+
+    </div>
+
+  </div>
+</div>
+

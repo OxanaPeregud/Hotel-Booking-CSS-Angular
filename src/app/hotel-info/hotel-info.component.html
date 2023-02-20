@@ -12,7 +12,12 @@
           <span class="main-title">GRAND HILTON HOTEL / THAILAND</span>
         </div>
         <div>
-          <span class="flash-offer">Flash Offer</span>
+          <a *ngIf="!isViewDetails" class="view-btn" mat-button (click)="setViewDetails()">
+            View details<span>&rarr;</span>
+          </a>
+          <a *ngIf="isViewDetails" class="view-btn" mat-button (click)="setViewDetails()">
+            Hide details<span>&darr;</span>
+          </a>
         </div>
       </div>
 
@@ -28,9 +33,10 @@
   </div>
 
   <div class="booking-background"></div>
+
   <div class="center hotel-items">
     <div>
-      <img src="assets/images/hotel.png" alt="Hotel">
+      <img src="../../assets/images/hotels/hotel.png" alt="Hotel">
     </div>
 
     <div>
@@ -65,7 +71,11 @@
       <div>
         <img src="assets/images/map.png" alt="Map">
       </div>
+
     </div>
+
   </div>
 
 </div>
+
+<app-hotel-details *ngIf="isViewDetails"></app-hotel-details>

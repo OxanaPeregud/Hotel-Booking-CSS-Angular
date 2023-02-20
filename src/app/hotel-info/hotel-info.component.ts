@@ -7,10 +7,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HotelInfoComponent implements OnInit {
 
+  public isViewDetails: boolean = false;
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
+  public setViewDetails(): void {
+    this.isViewDetails = !this.isViewDetails;
+  }
 }

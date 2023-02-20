@@ -22,6 +22,11 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {PackagesInfoComponent} from './packages-info/packages-info.component';
 import {FlashOfferBannerComponent} from './flash-offer-banner/flash-offer-banner.component';
 import {ReviewsSliderComponent} from './reviews-slider/reviews-slider.component';
+import {NewsSubscribeComponent} from './news-subscribe/news-subscribe.component';
+import {PopupComponent} from './popup/popup.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {ActivitiesComponent} from './activities/activities.component';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,11 @@ import {ReviewsSliderComponent} from './reviews-slider/reviews-slider.component'
     HotelDetailsComponent,
     PackagesInfoComponent,
     FlashOfferBannerComponent,
-    ReviewsSliderComponent
+    ReviewsSliderComponent,
+    NewsSubscribeComponent,
+    PopupComponent,
+    ActivitiesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +57,8 @@ import {ReviewsSliderComponent} from './reviews-slider/reviews-slider.component'
     MatAutocompleteModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

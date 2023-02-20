@@ -1,0 +1,52 @@
+.act-wrapper {
+  background-color: #F5FAFE;
+  width: 100%;
+  height: 500px;
+}
+
+h4 {
+  font-family: 'Muli Bold', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 60px 0 57px 165px;
+}
+
+.act-container {
+  width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 29px;
+}
+
+.act-content img {
+  position: absolute;
+}
+
+.act-text {
+  position: relative;
+  top: 143px;
+  left: 26px;
+  width: 153px;
+}
+
+.act-text span {
+  font-family: 'Muli Bold', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.book-btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  padding: 7px 22px;
+  margin-top: 18px;
+}

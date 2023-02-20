@@ -8,7 +8,7 @@ import {FormControl} from "@angular/forms";
 })
 export class HeaderComponent implements OnInit {
 
-  public myControl = new FormControl('');
+  public formControl = new FormControl('');
 
   constructor() {
   }
