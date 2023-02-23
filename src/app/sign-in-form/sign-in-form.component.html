@@ -1,0 +1,61 @@
+<div class="logo sign-in-logo">
+  <div>
+    Best <span>tour</span> plan
+  </div>
+  <mat-icon mat-dialog-close="true">close</mat-icon>
+</div>
+
+<form novalidate [formGroup]="form">
+
+  <div class="sign-in-form">
+
+    <p class="form-margin">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Email">
+        <mat-error *ngIf="isSignIn && formErrorsSignIn.email">
+          {{formErrorsSignIn.email}}
+        </mat-error>
+        <mat-error *ngIf="!isSignIn && formErrorsSignUp.email">
+          {{formErrorsSignUp.email}}
+        </mat-error>
+
+      </mat-form-field>
+    </p>
+
+    <p class="form-margin">
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Password">
+        <mat-error *ngIf="isSignIn && formErrorsSignIn.password">
+          {{formErrorsSignIn.password}}
+        </mat-error>
+        <mat-error *ngIf="!isSignIn && formErrorsSignUp.password">
+          {{formErrorsSignUp.password}}
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p *ngIf="!isSignIn">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" placeholder="First Name">
+        <mat-error *ngIf="!isSignIn && formErrorsSignUp.firstName">
+          {{formErrorsSignUp.firstName}}
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+  </div>
+
+</form>
+
+<div class="sign-in-bottom">
+  <button class="send" type="submit"
+          [disabled]="form.invalid"
+          (click)="onSubmit()">
+    <span>{{isSignIn ? "Sign in" : "Sign up"}}</span>
+  </button>
+
+  <a mat-button (click)="openSignUpForm()">{{!isSignIn ? "Already registered?" : "Not registered yet?"}}</a>
+</div>

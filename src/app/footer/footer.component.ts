@@ -20,10 +20,10 @@ export class FooterComponent implements OnInit {
 
   private validationMessages: any = {
     'name': {
-      'required': 'Name is required!'
+      'required': 'Name is required'
     },
     'phone': {
-      'required': 'Phone is required!'
+      'required': 'Phone is required'
     }
   };
 

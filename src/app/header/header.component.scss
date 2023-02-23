@@ -112,3 +112,30 @@ mat-toolbar a.active {
   width: 18px;
   margin-right: 20px;
 }
+
+.user-image {
+  border-radius: 50%;
+  object-fit: cover;
+  align-self: center;
+  margin-left: 50px;
+}
+
+.user-name {
+  align-self: center;
+  font-family: 'Muli Regular', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  margin-left: 18px;
+}
+
+.drop-icon {
+  align-self: center;
+  margin-left: 19px;
+  margin-top: 5px;
+
+}
+
+.arrow {
+  font-size: 30px;
+}

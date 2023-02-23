@@ -1,0 +1,57 @@
+<div class="profile-container">
+  <div class="profile-wrapper">
+    <div>
+      <img *ngIf="!user.image" src="assets/images/avatar/default-avatar.jpg" alt="Avatar" width="230" height="230">
+      <img *ngIf="user.image" src={{user.image}} alt="Avatar" width="230" height="230">
+      <div class="change-photo">
+        <a mat-button class="file-upload">
+          <input #avatar type="file" (change)="onChangeFile($event)" accept=".png, .jpg, .jpeg"/>
+          Change photo
+        </a>
+        <mat-icon class="delete-icon" *ngIf="user.image" matTooltip="Remove photo" (click)="deleteFile()">delete</mat-icon>
+      </div>
+    </div>
+    <div class="profile-info">
+      <p>
+        <span>First Name:</span>
+        <span>{{user.firstName}}</span>
+      </p>
+      <p>
+        <span>Last Name:</span>
+        <span>{{user.lastName}}</span>
+      </p>
+      <p>
+        <span>Phone:</span>
+        <span>{{user.phone}}</span>
+      </p>
+      <p>
+        <span>Email:</span>
+        <span>{{user.email}}</span>
+      </p>
+      <p>
+        <span>Gender:</span>
+        <span>{{user.gender}}</span>
+      </p>
+      <p>
+        <span>Age:</span>
+        <span>{{user.age}}</span>
+      </p>
+    </div>
+    <a class="update-btn" mat-button (click)="openUpdateProfileForm()">
+      Update profile info
+    </a>
+
+  </div>
+
+  <div>
+    <a *ngIf="!isViewOrders" class="view-btn" mat-button (click)="setViewOrders()">
+      View orders<span>&rarr;</span>
+    </a>
+    <a *ngIf="isViewOrders" class="view-btn" mat-button (click)="setViewOrders()">
+      Hide orders<span>&darr;</span>
+    </a>
+  </div>
+
+</div>
+
+<app-hotel-info *ngIf="isViewOrders"></app-hotel-info>

@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -27,6 +26,13 @@ import {PopupComponent} from './popup/popup.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {ActivitiesComponent} from './activities/activities.component';
 import {FooterComponent} from './footer/footer.component';
+import {SignInFormComponent} from './sign-in-form/sign-in-form.component';
+import {ProfileComponent} from './profile/profile.component';
+import {UpdateProfileFormComponent} from './update-profile-form/update-profile-form.component';
+import {HttpClientModule} from "@angular/common/http";
+import {MatSelectModule} from "@angular/material/select";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -42,24 +48,31 @@ import {FooterComponent} from './footer/footer.component';
     NewsSubscribeComponent,
     PopupComponent,
     ActivitiesComponent,
-    FooterComponent
+    FooterComponent,
+    SignInFormComponent,
+    ProfileComponent,
+    UpdateProfileFormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatBadgeModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatTabsModule,
-    MatDialogModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatBadgeModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatAutocompleteModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatTabsModule,
+        MatDialogModule,
+        MatSelectModule,
+        MatTooltipModule,
+        MatMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

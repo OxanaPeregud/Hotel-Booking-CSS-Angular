@@ -28,18 +28,13 @@
   border-radius: 4px 0 0 4px;
 }
 
-.subscribe-form mat-label, .subscribe-form mat-form-field {
+.subscribe-form mat-form-field {
   font-family: 'Muli Light', sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: #BDBDBD;
-  margin-left: 10px;
+  color: #0A223D;
+  margin-left: 23px;
   margin-top: 2px;
-}
-
-input#mat-input-1 {
-  margin-left: 10px;
-  color: #000;
 }
 
 .mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button {
@@ -52,7 +47,7 @@ input#mat-input-1 {
   line-height: 15px;
   color: #FFFFFF;
   background-color: #EC1F46;
-  padding: 18px;
+  padding: 19px;
   align-self: center;
   border-radius: 0 4px 4px 0;
   margin-left: -20px;

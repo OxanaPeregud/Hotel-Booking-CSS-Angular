@@ -56,7 +56,6 @@ a.mat-focus-indicator.mat-button.mat-button-base {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 505px 539px;
-  padding-bottom: 163px;
   column-gap: 81px;
 }
 
@@ -83,7 +82,7 @@ a.mat-focus-indicator.mat-button.mat-button-base {
 .message-form {
   width: 242px;
   height: 50px;
-  background-color: #FFFFFF;;
+  background-color: #FFFFFF;
   border-radius: 4px;
 }
 
@@ -101,12 +100,13 @@ a.mat-focus-indicator.mat-button.mat-button-base {
 .contact-form-bottom {
   width: 539px;
   height: 123px;
-  background-color: #FFFFFF;;
+  background-color: #FFFFFF;
   border-radius: 4px;
 }
 
 form {
   margin-top: 34px;
+  margin-bottom: 35px;
 }
 
 .contact-details {
@@ -125,4 +125,45 @@ mat-form-field {
   color: #333333;
   padding-left: 23px;
   padding-top: 2px;
+}
+
+.send span {
+  font-family: 'Muli Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  padding: 18px 65px;
+  border-radius: 4px;
+  margin-left: -16px;
+}
+
+.bottom-form {
+  display: flex;
+  justify-content: space-between;
+  width: calc(539px + 23px);
+}
+
+.required {
+  font-family: 'Muli Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #E0E0E0;
+}
+
+.bottom-links {
+  width: 696px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 95px;
+  margin-left: 578px;
+  padding-bottom: 46px;
+}
+
+.left-bottom-links {
+  font-family: 'Muli Regular', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  opacity: 0.5;
 }

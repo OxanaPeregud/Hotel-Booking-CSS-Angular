@@ -121,22 +121,37 @@
         <p>
           <mat-form-field class="contact-form-bottom" floatLabel="never">
             <mat-label>Message</mat-label>
-            <textarea  formControlName="message" matInput></textarea>
+            <textarea formControlName="message" matInput></textarea>
           </mat-form-field>
         </p>
 
-
       </form>
 
-      <button class="send" type="submit" mat-stroked-button
-              [disabled]="form.invalid"
-              (click)="openMessagePopup('Thank you for subscribing to our newsletter!')">
-        <span>Send</span>
-      </button>
+      <div class="bottom-form">
+        <button class="send" type="submit" mat-stroked-button
+                [disabled]="form.invalid"
+                (click)="openMessagePopup('Thank you for your message! We will get back to you soon')">
+          <span>Send</span>
+        </button>
 
+        <span class="required">* Required Fields</span>
+      </div>
 
     </div>
+
   </div>
 
+  <div class="bottom-links">
+    <div class="left-bottom-links">
+      <a mat-button>Disclaimer</a>
+      <a mat-button>Conditions of use</a>
+      <a mat-button>Cancellation policy</a>
+    </div>
+    <img src="assets/images/social/social.svg" alt="Social">
+  </div>
+
+  <div>
+
+  </div>
 
 </div>

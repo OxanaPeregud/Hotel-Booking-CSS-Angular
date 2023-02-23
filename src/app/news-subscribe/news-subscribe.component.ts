@@ -19,8 +19,8 @@ export class NewsSubscribeComponent implements OnInit {
 
   private validationMessages: any = {
     'email': {
-      'required': 'Email is required!',
-      'pattern': 'Email is not valid!'
+      'required': 'Email is required',
+      'pattern': 'Email is not valid'
     }
   };
 

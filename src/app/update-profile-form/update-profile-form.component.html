@@ -1,0 +1,78 @@
+<div class="logo profile-logo">
+  <div>
+    Best <span>tour</span> plan
+  </div>
+  <mat-icon mat-dialog-close="true">close</mat-icon>
+</div>
+
+<form novalidate [formGroup]="form">
+
+  <div class="profile-form">
+
+    <div>
+
+        <mat-form-field class="first-row" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" placeholder="First Name">
+          <mat-error *ngIf="formErrors.firstName">
+            {{formErrors.firstName}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" placeholder="Last Name">
+        </mat-form-field>
+
+    </div>
+
+    <div>
+
+        <mat-form-field class="first-row" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Email">
+          <mat-error *ngIf="formErrors.email">
+            {{formErrors.email}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" placeholder="Phone">
+        </mat-form-field>
+
+    </div>
+
+    <div>
+
+      <mat-form-field  class="first-row" appearance="outline">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" formControlName="age" placeholder="Age">
+        <mat-error *ngIf="formErrors.age">
+          {{formErrors.age}}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender" placeholder="Gender" >
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let gender of genderList" [value]="gender">
+            {{gender}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+
+  </div>
+
+</form>
+
+<div class="sign-in-bottom">
+  <button class="send" type="submit"
+          [disabled]="form.invalid"
+          (click)="onSubmit()">
+    Save
+  </button>
+</div>
