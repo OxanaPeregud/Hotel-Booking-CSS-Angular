@@ -39,8 +39,8 @@ export class HeaderComponent implements OnInit {
         this.getUser(id);
       });
     this.hotelService.hotelAddToCartEvent
-      .subscribe((hotel) => {
-        this.addToCart(hotel);
+      .subscribe((hotels) => {
+        this.addToCart(hotels);
       });
   }
 
@@ -87,22 +87,8 @@ export class HeaderComponent implements OnInit {
     this.userService.userSignOutEvent.emit();
   }
 
-  public addToCart(hotel: Hotel): void {
-    const hotels = this.hotelsInCart.filter(item => item.id == hotel.id);
-    if (hotels.length == 0) {
-      this.hotelsInCart.push(hotel);
-      this.dialog.open(PopupComponent, {
-          width: '500px',
-          data: "Hotel added to cart"
-        }
-      );
-    } else {
-      this.dialog.open(PopupComponent, {
-          width: '500px',
-          data: "Hotel is already added to cart"
-        }
-      );
-    }
+  public addToCart(hotels: Hotel[]): void {
+    this.hotelsInCart = hotels;
   }
 
   public openCart(): void {

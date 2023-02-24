@@ -59,7 +59,8 @@
             </div>
           </div>
           <div>
-            <a class="other-options" mat-button (click)="addToCart(hotel)">Add to Cart</a>
+            <a *ngIf="!isInCard(hotel)" class="other-options" mat-button (click)="addToCart(hotel)">Add to Cart</a>
+            <a *ngIf="isInCard(hotel)" class="other-options" mat-button (click)="removeFromCart(hotel)">Remove from Cart</a>
           </div>
         </div>
 
