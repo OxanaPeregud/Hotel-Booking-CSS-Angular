@@ -15,19 +15,23 @@
     <div class="logo">
       Best <span>tour</span> plan
     </div>
-    <form class="search-form">
-      <mat-form-field class="search-full-width" floatLabel="never">
-        <mat-label>Search Location</mat-label>
-        <input type="text"
-               matInput
-               [formControl]="formControl">
-      </mat-form-field>
+
+    <form novalidate [formGroup]="form">
+      <div class="search-form">
+        <mat-form-field class="search-full-width" floatLabel="never">
+          <mat-label>Search Location</mat-label>
+          <input matInput formControlName="search">
+        </mat-form-field>
+
+      </div>
+
+      <a mat-button class="search-img" (click)="search()">
+        <img src="assets/images/search.svg" width="16" height="16" alt="Search">
+      </a>
     </form>
-    <a mat-button class="search-img" (click)="search()">
-      <img src="assets/images/search.svg" width="16" height="16" alt="Search">
-    </a>
+
     <a mat-button class="cart">
-      <mat-icon matBadge="2" matBadgeColor="warn">shopping_cart</mat-icon>
+      <mat-icon matBadge={{hotelsInCart.length}} matBadgeColor="warn" (click)="openCart()">shopping_cart</mat-icon>
     </a>
     <span class="flex-spacer"></span>
 

@@ -15,7 +15,7 @@
   </mat-toolbar>
 
   <div class="package-wrapper center">
-    <div>
+    <div *ngIf="activeTab == 1">
       <h2>Package Summery</h2>
       <div class="package-title">
         Package Highlights
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="up-package">
+    <div *ngIf="activeTab == 1" class="up-package">
       <div class="package-title">
         Offer Details
       </div>
@@ -69,9 +69,10 @@
 
   </div>
 
-  <div class="bottom-package center">
+  <div class="center" *ngIf="activeTab == 2">
+    <h2>Hotel information</h2>
     <div class="package-title">
-      Package Summery Details
+      Hotel Details
     </div>
 
     <div class="package-details bottom-details">
@@ -214,7 +215,5 @@
     </div>
 
   </div>
-
-  <hr>
 
 </div>

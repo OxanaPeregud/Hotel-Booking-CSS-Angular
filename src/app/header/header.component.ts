@@ -1,10 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {MatDialog} from "@angular/material/dialog";
 import {SignInFormComponent} from "../sign-in-form/sign-in-form.component";
 import {UserService} from "../services/user.service";
 import {User} from "../shared/models/user";
 import {Router} from "@angular/router";
+import {HotelService} from "../services/hotel.service";
+import {Hotel} from "../shared/models/hotel";
+import {PopupComponent} from "../popup/popup.component";
+import {CartComponent} from "../cart/cart.component";
 
 @Component({
   selector: 'app-header',
@@ -13,12 +17,16 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
-  public formControl = new FormControl('');
   public user: User | undefined;
+  public form!: FormGroup;
+  public hotelsInCart: Hotel[] = [];
 
   constructor(private dialog: MatDialog,
               private userService: UserService,
-              private router: Router) {
+              private router: Router,
+              private fb: FormBuilder,
+              private hotelService: HotelService) {
+    this.createForm();
   }
 
   ngOnInit(): void {
@@ -30,6 +38,16 @@ export class HeaderComponent implements OnInit {
       .subscribe((id) => {
         this.getUser(id);
       });
+    this.hotelService.hotelAddToCartEvent
+      .subscribe((hotel) => {
+        this.addToCart(hotel);
+      });
+  }
+
+  private createForm(): void {
+    this.form = this.fb.group({
+      search: null
+    });
   }
 
   public getUser(userId: number): void {
@@ -43,6 +61,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public search(): void {
+    this.hotelService.hotelSearchEvent.emit(this.form.value);
   }
 
   public openSignInForm(): void {
@@ -66,5 +85,31 @@ export class HeaderComponent implements OnInit {
     }
     this.user = undefined;
     this.userService.userSignOutEvent.emit();
+  }
+
+  public addToCart(hotel: Hotel): void {
+    const hotels = this.hotelsInCart.filter(item => item.id == hotel.id);
+    if (hotels.length == 0) {
+      this.hotelsInCart.push(hotel);
+      this.dialog.open(PopupComponent, {
+          width: '500px',
+          data: "Hotel added to cart"
+        }
+      );
+    } else {
+      this.dialog.open(PopupComponent, {
+          width: '500px',
+          data: "Hotel is already added to cart"
+        }
+      );
+    }
+  }
+
+  public openCart(): void {
+    this.dialog.open(CartComponent, {
+        width: '500px',
+        data: this.hotelsInCart
+      }
+    );
   }
 }

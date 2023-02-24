@@ -33,6 +33,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatSelectModule} from "@angular/material/select";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatMenuModule} from "@angular/material/menu";
+import {CartComponent} from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -51,28 +52,29 @@ import {MatMenuModule} from "@angular/material/menu";
     FooterComponent,
     SignInFormComponent,
     ProfileComponent,
-    UpdateProfileFormComponent
+    UpdateProfileFormComponent,
+    CartComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
-        MatBadgeModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatAutocompleteModule,
-        ReactiveFormsModule,
-        MatCardModule,
-        MatTabsModule,
-        MatDialogModule,
-        MatSelectModule,
-        MatTooltipModule,
-        MatMenuModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatTabsModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatTooltipModule,
+    MatMenuModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

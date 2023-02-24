@@ -15,6 +15,6 @@ export class PopupComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.dialogRef.close();
-    }, 5000);
+    }, 3000);
   }
 }

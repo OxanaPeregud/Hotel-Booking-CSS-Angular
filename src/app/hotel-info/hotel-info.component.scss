@@ -1,17 +1,22 @@
 .hotel-info-container {
   background-color: #F5FAFE;
   width: 100%;
-  height: 630px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px dashed #E0E0E0;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel-items {
   display: flex;
   justify-content: space-between;
-  height: 450px;
   margin-top: -144px;
   float: left;
   margin-left: 165px;
+}
+
+.filtered {
+  color: #EC1F46;
 }
 
 .booking-wrapper {
@@ -115,12 +120,8 @@
 }
 
 .hotel-path {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 10px;
-  line-height: 13px;
-  color: #0A223D;
-  padding-top: 18px;
-  padding-bottom: 19px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .hotel-title {
@@ -149,6 +150,7 @@
   line-height: 30px;
   color: #333333;
   margin-right: 14px;
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -162,11 +164,13 @@
   font-family: 'Muli SemiBold', sans-serif;;
   font-size: 18px;
   line-height: 14px;
-  color: #FFFFFF;
-  background-color: #EC1F46;
+  color: #0A223D;
+  border: 1px solid #0A223D;
   border-radius: 3px;
   padding: 14px 0 21px 0;
   width: 180px;
+  margin-left: 1090px;
+  margin-top: 20px;
 }
 
 .view-btn span {
