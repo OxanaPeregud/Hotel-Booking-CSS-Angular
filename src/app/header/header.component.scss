@@ -143,3 +143,12 @@ form {
 .arrow {
   font-size: 30px;
 }
+
+button.mat-focus-indicator.mat-menu-item.ng-tns-c173-1 {
+  border-bottom: 1px dashed #E0E0E0;
+}
+
+::ng-deep .mat-menu-content.ng-tns-c173-1 {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}

@@ -1,24 +1,37 @@
-<div class="review-wrapper">
+<div *ngIf="feedbacks.length != 0" class="review-wrapper">
   <h2>What people think about us</h2>
 
+
   <div class="avatar-wrapper">
-    <img class="avatar-img" src="assets/images/avatar/avatar.jpeg" alt="Avatar">
-    <span class="avatar-name">Megan Fox</span>
+    <img *ngIf="!user || !user.image" class="avatar-img" src="../../assets/images/avatar/default-avatar.jpg"
+         alt="Avatar">
+    <img *ngIf="user && user.image" class="avatar-img" src={{user.image}} alt="Avatar">
+
+    <span class="avatar-name">{{user.firstName}}</span>
     <span class="review-date">Stayed 18 Nov, 2019</span>
     <img src="assets/images/stars.svg" alt="Stars">
   </div>
 
   <div class="review-container">
+
     <img class="quotes-top-img" src="assets/images/quotes-top.svg" alt="Quotes">
     <img class="quotes-bottom-img" src="assets/images/quotes-bottom.svg" alt="Quotes">
 
-    <p>
-      It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue
-      was only that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of
-      gallery which were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location
-      is not good as per atmosphere, it is very nearby most of the popular places but self location in a narrow street
-      is not good. Overall it was a good experience and could recommend.
-    </p>
+    <div class="text-content">
+
+      <button *ngIf="feedbacks.length > 1" class="left-arrow" mat-button (click)="getPreviousFeedback(currentFeedback?.id)">
+        <span class="fa fa-angle-left fa-2x"></span>
+      </button>
+
+      <p>
+        {{currentFeedback?.text}}
+      </p>
+
+      <button *ngIf="feedbacks.length > 1" class="right-arrow" mat-button (click)="getNextFeedback(currentFeedback?.id)">
+        <span class="fa fa-angle-right fa-2x"></span>
+      </button>
+
+    </div>
 
   </div>
 

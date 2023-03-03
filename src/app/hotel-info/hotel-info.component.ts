@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {HOTELS} from "../shared/models/hotels";
 import {HotelService} from "../services/hotel.service";
 import {Hotel} from "../shared/models/hotel";
@@ -16,6 +16,8 @@ export class HotelInfoComponent implements OnInit {
   public viewedHotels: number[] = [];
   public isFilter: boolean = false;
   public hotelsInCart: Hotel[] = [];
+  @Input() public hotelsIds: number[] = [];
+  @Input() public isProfile: boolean = false;
 
   constructor(private hotelService: HotelService,
               private dialog: MatDialog) {
@@ -25,6 +27,19 @@ export class HotelInfoComponent implements OnInit {
     this.hotelService.hotelSearchEvent.subscribe(search => {
       this.applyFilter(search);
     });
+    if (this.isProfile) {
+      if (this.hotelsIds.length != 0) {
+        const orderedHotels: Hotel[] = [];
+        this.hotels.forEach(item => {
+          if (item.id && this.hotelsIds.includes(item.id)) {
+            orderedHotels.push(item);
+          }
+        });
+        this.hotels = orderedHotels;
+      } else {
+        this.hotels = [];
+      }
+    }
   }
 
   public setViewDetails(hotelId: number | undefined, view: boolean): void {

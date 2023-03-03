@@ -42,6 +42,10 @@ export class HeaderComponent implements OnInit {
       .subscribe((hotels) => {
         this.addToCart(hotels);
       });
+    this.userService.bookingEvent
+      .subscribe(() => {
+        this.hotelsInCart = [];
+      });
   }
 
   private createForm(): void {
@@ -66,10 +70,9 @@ export class HeaderComponent implements OnInit {
 
   public openSignInForm(): void {
     this.dialog.open(SignInFormComponent, {
-        width: '500px',
-        disableClose: true
-      }
-    );
+      width: '500px',
+      disableClose: true
+    });
   }
 
   public goToProfile(): void {
@@ -93,8 +96,12 @@ export class HeaderComponent implements OnInit {
 
   public openCart(): void {
     this.dialog.open(CartComponent, {
-        width: '500px',
-        data: this.hotelsInCart
+        width: '700px',
+        data: {
+          hotelsInCart: this.hotelsInCart,
+          user: this.user
+        },
+        disableClose: true
       }
     );
   }

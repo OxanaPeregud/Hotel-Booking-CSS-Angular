@@ -14,6 +14,7 @@ export class UserService {
   @Output() userUpdateEvent = new EventEmitter<any>();
   @Output() userSignInEvent = new EventEmitter<any>();
   @Output() userSignOutEvent = new EventEmitter<any>();
+  @Output() bookingEvent = new EventEmitter<any>();
 
   constructor(private http: HttpClient) {
   }
@@ -26,8 +27,8 @@ export class UserService {
     return this.http.get<User[]>(this.usersLink + "?id=" + userId);
   }
 
-  public checkIfEmailExists(user: User): Observable<User[]> {
-    return this.http.get<User[]>(this.usersLink + "?email=" + user.email);
+  public checkIfEmailExists(email: string): Observable<User[]> {
+    return this.http.get<User[]>(this.usersLink + "?email=" + email);
   }
 
   public saveUser(user: User): Observable<User> {

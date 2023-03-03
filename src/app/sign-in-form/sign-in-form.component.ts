@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {MatDialog, MatDialogRef} from "@angular/material/dialog";
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {FormBuilderService} from "../services/form-builder.service";
 import {Router} from "@angular/router";
@@ -57,7 +57,8 @@ export class SignInFormComponent implements OnInit {
               private formBuilderService: FormBuilderService,
               private dialogRef: MatDialogRef<SignInFormComponent>,
               private router: Router,
-              private userService: UserService) {
+              private userService: UserService,
+              @Inject(MAT_DIALOG_DATA) public data: any) {
     this.createForm();
   }
 
@@ -76,8 +77,8 @@ export class SignInFormComponent implements OnInit {
 
   public onSubmit(): void {
     this.user = this.form.value;
-    if (!this.isSignIn) {
-      this.userService.checkIfEmailExists(this.user).subscribe(data => {
+    if (!this.isSignIn && this.user && this.user.email) {
+      this.userService.checkIfEmailExists(this.user.email).subscribe(data => {
         if (data.length != 0) {
           this.openMessagePopup("User with this email already exists");
         } else {
@@ -95,13 +96,37 @@ export class SignInFormComponent implements OnInit {
       this.userService.getUser(this.user).subscribe(data => {
         if (data.length == 0) {
           this.openMessagePopup("User not found");
+        } else if (data[0] && data[0].id && this.data && this.data.orderedHotelsIds) {
+          this.user = data[0];
+          if (data[0].orderedHotelsIds) {
+            this.user.orderedHotelsIds = data[0].orderedHotelsIds.concat(this.data.orderedHotelsIds);
+          } else {
+            this.user.orderedHotelsIds = this.data.orderedHotelsIds;
+          }
+          this.userService.updateUser(this.user, data[0].id).subscribe(updateData => {
+            if (updateData) {
+              this.userService.userUpdateEvent.emit(this.user.id);
+              this.onSignIn(data);
+            }
+          });
         } else {
-          this.form.reset();
-          this.dialogRef.close();
-          this.userService.userSignInEvent.emit(data[0].id);
-          this.router.navigate(['/profile', data[0].id]);
+          this.onSignIn(data);
         }
       });
+    }
+  }
+
+  private onSignIn(data: any): void {
+    this.form.reset();
+    this.dialogRef.close();
+    this.userService.userSignInEvent.emit(data[0].id);
+    this.router.navigate(['/profile', data[0].id]);
+    if (this.data && this.data.orderedHotelsIds) {
+      this.dialog.open(PopupComponent, {
+        width: '500px',
+        data: "Thank you for booking! Our manager will contact you soon"
+      });
+      this.userService.bookingEvent.emit();
     }
   }
 

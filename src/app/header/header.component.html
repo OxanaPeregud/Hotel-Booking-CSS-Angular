@@ -31,7 +31,10 @@
     </form>
 
     <a mat-button class="cart">
-      <mat-icon matBadge={{hotelsInCart.length}} matBadgeColor="warn" (click)="openCart()">shopping_cart</mat-icon>
+      <mat-icon *ngIf="hotelsInCart.length != 0" matBadge={{hotelsInCart.length}} matBadgeColor="warn"
+                (click)="openCart()">shopping_cart
+      </mat-icon>
+      <mat-icon *ngIf="hotelsInCart.length == 0">shopping_cart</mat-icon>
     </a>
     <span class="flex-spacer"></span>
 
@@ -40,7 +43,8 @@
     <img class="user-image" *ngIf="user && !user?.image" src="assets/images/avatar/default-avatar.jpg" alt="Avatar"
          width="40" height="40">
     <span *ngIf="user" class="user-name">{{user.firstName}}</span>
-    <span *ngIf="user" class="drop-icon" [matMenuTriggerFor]="menu"><mat-icon class="arrow">keyboard_arrow_down</mat-icon></span>
+    <span *ngIf="user" class="drop-icon" [matMenuTriggerFor]="menu"><mat-icon
+      class="arrow">keyboard_arrow_down</mat-icon></span>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="goToProfile()">Profile</button>
       <button mat-menu-item (click)="signOut()">Sign out</button>

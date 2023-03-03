@@ -123,3 +123,17 @@ body {
 .logo span {
   color: #EC1F46;
 }
+
+.mat-header-cell {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mat-header-row {
+  width: 100%;
+}
+
+.mat-cell {
+  text-align: center;
+  justify-content: center;
+}

@@ -34,6 +34,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatMenuModule} from "@angular/material/menu";
 import {CartComponent} from './cart/cart.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import {CartComponent} from './cart/cart.component';
     MatDialogModule,
     MatSelectModule,
     MatTooltipModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

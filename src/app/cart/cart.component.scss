@@ -1,0 +1,68 @@
+.table-container {
+  width: 100%;
+  align-items: center;
+}
+
+
+.close-button {
+  float: right;
+  top: -24px;
+  right: -24px;
+}
+
+.close-icon {
+  transition: 1s ease-in-out;
+}
+
+.close-icon:hover {
+  transform: rotate(180deg) !important;
+}
+
+:host .icon-outside .close-button {
+  float: right;
+  top: -52px;
+  right: -52px;
+}
+
+:host .icon-outside .mat-dialog-container {
+  overflow: unset;
+}
+
+mat-header-cell.mat-header-cell.cdk-header-cell, mat-cell.mat-cell.cdk-cell {
+  font-family: 'Muli Regular', sans-serif;
+  font-size: 20px;
+}
+
+.total-price {
+  font-family: 'Muli Regular', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+td.mat-footer-cell.cdk-footer-cell.cdk-column-price.mat-column-price.ng-star-inserted {
+  float: right;
+}
+
+.mat-column-name {
+  flex: none;
+  width: 50%;
+}
+
+.book-btn {
+  font-family: 'Muli Regular', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #F5FAFE;
+  align-self: center;
+  background-color: #EC1F46;
+  border-radius: 6px;
+  padding: 12px 25px;
+  margin-top: 20px;
+}
+
+.cart-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+

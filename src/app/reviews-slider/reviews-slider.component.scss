@@ -21,10 +21,8 @@
   text-align: justify;
   color: #333333;
   width: 537px;
-  align-self: flex-end;
-  padding-bottom: 30px;
+  align-self: center;
   margin-top: -30px;
-  margin-left: 99px;
 }
 
 .review-container {
@@ -79,3 +77,13 @@
   margin-top: 10px;
   margin-bottom: 4px;
 }
+
+.left-arrow, .right-arrow {
+  margin-top: -30px;
+}
+
+.text-content {
+  display: flex;
+  justify-content: space-between;
+}
+

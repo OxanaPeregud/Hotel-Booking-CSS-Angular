@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
 
   public user: User = new User();
   public isViewOrders: boolean = false;
-  @ViewChild('avatar') input: any;
+  @ViewChild('avatar') public input: any;
 
   constructor(private dialog: MatDialog,
               private activeRoute: ActivatedRoute,
@@ -28,7 +28,7 @@ export class ProfileComponent implements OnInit {
       .subscribe(() => {
         this.getUser();
       });
-    this.userService.userSignOutEvent .subscribe(() => {
+    this.userService.userSignOutEvent.subscribe(() => {
       this.user = new User();
     });
   }
@@ -70,7 +70,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  public deleteFile() {
+  public deleteFile(): void {
     this.user.image = undefined;
     this.input.nativeElement.value = '';
     if (this.user && this.user.id) {

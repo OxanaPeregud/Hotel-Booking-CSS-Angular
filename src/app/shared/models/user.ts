@@ -8,4 +8,5 @@ export class User {
   gender?: string;
   age?: number;
   image?: string;
+  orderedHotelsIds?: number[];
 }

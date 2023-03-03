@@ -94,7 +94,7 @@
         <div class="contact-form-top">
           <div>
             <mat-form-field class="message-form" floatLabel="never">
-              <mat-label>Your Full Name</mat-label>
+              <mat-label>Your Name</mat-label>
               <input formControlName="name" matInput>
             </mat-form-field>
             <mat-error *ngIf="formErrors.name">
@@ -106,31 +106,37 @@
           </div>
           <div>
             <mat-form-field class="message-form" floatLabel="never">
-              <mat-label>Phone Number</mat-label>
-              <input formControlName="phone" matInput>
+              <mat-label>Email</mat-label>
+              <input formControlName="email" matInput>
             </mat-form-field>
-            <mat-error *ngIf="formErrors.phone">
-              {{formErrors.phone}}
+            <mat-error *ngIf="formErrors.email">
+              {{formErrors.email}}
             </mat-error>
-            <mat-error *ngIf="!formErrors.phone">
+            <mat-error *ngIf="!formErrors.email">
               <div class="error-margin"></div>
             </mat-error>
           </div>
         </div>
 
-        <p>
+        <div>
           <mat-form-field class="contact-form-bottom" floatLabel="never">
-            <mat-label>Message</mat-label>
-            <textarea formControlName="message" matInput></textarea>
+            <mat-label>Feedback</mat-label>
+            <textarea formControlName="feedback" matInput></textarea>
           </mat-form-field>
-        </p>
+          <mat-error class="error-feedback" *ngIf="formErrors.feedback">
+            {{formErrors.feedback}}
+          </mat-error>
+          <mat-error *ngIf="!formErrors.feedback">
+            <div class="no-error-feedback"></div>
+          </mat-error>
+        </div>
 
       </form>
 
       <div class="bottom-form">
         <button class="send" type="submit" mat-stroked-button
                 [disabled]="form.invalid"
-                (click)="openMessagePopup('Thank you for your message! We will get back to you soon')">
+                (click)="onSubmit()">
           <span>Send</span>
         </button>
 
