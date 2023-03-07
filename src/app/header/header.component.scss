@@ -4,13 +4,17 @@ mat-toolbar {
   padding: 0;
 }
 
+.toolbar {
+  display: flex;
+  justify-content: space-around;
+}
+
 mat-toolbar a {
   font-family: 'Muli Bold', sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-right: 83px;
   padding: 0;
 }
 
@@ -152,3 +156,72 @@ button.mat-focus-indicator.mat-menu-item.ng-tns-c173-1 {
   padding-bottom: 0 !important;
   padding-top: 0 !important;
 }
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+  mat-toolbar a {
+    margin-right: 0;
+  }
+
+  .cart {
+    margin-left: 10%;
+  }
+
+  .logo-wrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .contacts-wrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+@media screen and (max-width: 864px) {
+  .not-active {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    color: #FFFFFF;
+  }
+
+  .toolbar {
+    justify-content: space-around;
+  }
+
+  .cart {
+    margin-left: 3%;
+  }
+
+  @media screen and (max-width: 785px) {
+    form {
+      display: none;
+    }
+
+    .cart {
+      margin-left: 15%;
+    }
+
+    .right-contact {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .logo {
+      display: none;
+    }
+
+    .cart {
+      margin-left: 0;
+    }
+  }
+}
+

@@ -3,10 +3,10 @@
     <span>Questions? Need Help?</span>
     <span><a href="tel:+123-456-1500">Call us on (+123) 456 1500</a></span>
     <span class="flex-spacer"></span>
-    <img src="assets/images/gift.svg" alt="Gift">
-    <span><a href="#">BTP Gift Card</a></span>
-    <img src="assets/images/star.svg" alt="Star">
-    <span><a href="#">Loyalty Program</a></span>
+    <img class="right-contact" src="assets/images/gift.svg" alt="Gift">
+    <span class="right-contact"><a href="#">BTP Gift Card</a></span>
+    <img class="right-contact" src="assets/images/star.svg" alt="Star">
+    <span class="right-contact"><a href="#">Loyalty Program</a></span>
   </div>
 </div>
 
@@ -54,13 +54,22 @@
 </div>
 
 <mat-toolbar>
-  <div class="center">
+  <div class="center toolbar">
     <a mat-button routerLink='/home' routerLinkActive='active'>All Deals</a>
     <a mat-button routerLink='/hotels' routerLinkActive='active'>Hotels</a>
-    <a mat-button routerLink='#' routerLinkActive='active'>Activities</a>
-    <a mat-button routerLink='#' routerLinkActive='active'>Hotel Day Packages</a>
-    <a mat-button routerLink='#' routerLinkActive='active'>Restaurants</a>
-    <a mat-button routerLink='#' routerLinkActive='active'>Events</a>
-    <a mat-button routerLink='#' routerLinkActive='active'>Rodrigues</a>
+    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Activities</a>
+    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Hotel Day Packages</a>
+    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Restaurants</a>
+    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Events</a>
+    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Rodrigues</a>
+
+    <mat-icon [matMenuTriggerFor]="main" class="menu">menu</mat-icon>
+    <mat-menu #main="matMenu">
+      <button mat-menu-item>Activities</button>
+      <button mat-menu-item>Hotel Day Packages</button>
+      <button mat-menu-item>Restaurants</button>
+      <button mat-menu-item>Events</button>
+      <button mat-menu-item>Rodrigues</button>
+    </mat-menu>
   </div>
 </mat-toolbar>
