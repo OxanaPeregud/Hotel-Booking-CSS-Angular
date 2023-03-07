@@ -24,6 +24,9 @@ export class ReviewsSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFeedbacks();
+    this.feedbackService.reviewAddEvent.subscribe(() => {
+      this.getFeedbacks();
+    });
   }
 
   private getFeedbacks(): void {

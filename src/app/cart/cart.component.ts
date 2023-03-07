@@ -61,7 +61,6 @@ export class CartComponent implements OnInit {
         if (data) {
           this.userService.userUpdateEvent.emit(this.data.user.id);
           this.dialog.open(PopupComponent, {
-            width: '500px',
             data: "Thank you for booking! Our manager will contact you soon"
           });
           this.userService.bookingEvent.emit();
@@ -75,7 +74,6 @@ export class CartComponent implements OnInit {
 
   public openSignInForm(orderedHotelsIds: number[]): void {
     this.dialog.open(SignInFormComponent, {
-      width: '500px',
       disableClose: true,
       data: {
         orderedHotelsIds: orderedHotelsIds

@@ -50,10 +50,8 @@ export class ProfileComponent implements OnInit {
 
   public openUpdateProfileForm(): void {
     this.dialog.open(UpdateProfileFormComponent, {
-        width: '1000px',
-        data: this.user
-      }
-    );
+      data: this.user
+    });
   }
 
   public onChangeFile(event: any): void {

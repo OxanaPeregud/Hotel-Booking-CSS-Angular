@@ -80,7 +80,7 @@ a.mat-focus-indicator.mat-button.mat-button-base {
 }
 
 .message-form {
-  width: 242px;
+  width: 231px;
   height: 50px;
   background-color: #FFFFFF;
   border-radius: 4px;
@@ -91,6 +91,10 @@ a.mat-focus-indicator.mat-button.mat-button-base {
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   margin-bottom: 15px;
+}
+
+textarea {
+  height: 90px;
 }
 
 .error-margin {
@@ -123,6 +127,7 @@ mat-form-field {
   line-height: 15px;
   color: #333333;
   padding-left: 23px;
+  padding-right: 23px;
   padding-top: 2px;
 }
 

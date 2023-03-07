@@ -62,7 +62,15 @@ export class HotelInfoComponent implements OnInit {
     this.hotels = HOTELS;
     if (data.search) {
       this.hotels = this.hotels.filter(item => item.country?.toLowerCase() == data.search.toLowerCase());
-      this.isFilter = true;
+      if (this.hotels.length != 0) {
+        this.isFilter = true;
+      } else {
+        this.hotels = HOTELS;
+        this.isFilter = false;
+        this.dialog.open(PopupComponent, {
+          data: "Location not found"
+        });
+      }
     } else {
       this.isFilter = false;
     }
@@ -77,10 +85,8 @@ export class HotelInfoComponent implements OnInit {
     if (hotel && !this.isInCard(hotel)) {
       this.hotelsInCart.push(hotel);
       this.dialog.open(PopupComponent, {
-          width: '500px',
-          data: "Hotel added to cart"
-        }
-      );
+        data: "Hotel added to cart"
+      });
     }
     this.hotelService.hotelAddToCartEvent.emit(this.hotelsInCart);
   }
@@ -89,7 +95,6 @@ export class HotelInfoComponent implements OnInit {
     if (hotel) {
       this.hotelsInCart = this.hotelsInCart.filter(item => item.id != hotel.id);
       this.dialog.open(PopupComponent, {
-          width: '500px',
           data: "Hotel removed from cart"
         }
       );

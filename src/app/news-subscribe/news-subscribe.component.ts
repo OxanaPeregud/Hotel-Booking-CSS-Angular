@@ -44,7 +44,6 @@ export class NewsSubscribeComponent implements OnInit {
 
   public openMessagePopup(message: string): void {
     this.dialog.open(PopupComponent, {
-        width: '500px',
         data: message
       }
     );

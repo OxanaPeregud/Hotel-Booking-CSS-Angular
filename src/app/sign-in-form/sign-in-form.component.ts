@@ -82,12 +82,19 @@ export class SignInFormComponent implements OnInit {
         if (data.length != 0) {
           this.openMessagePopup("User with this email already exists");
         } else {
+          this.user.orderedHotelsIds = this.data?.orderedHotelsIds;
           this.userService.saveUser(this.user).subscribe(data => {
             if (data) {
               this.form.reset();
               this.dialogRef.close();
               this.userService.userSignInEvent.emit(data.id);
               this.router.navigate(['/profile', data.id]);
+              if (this.data && this.data.orderedHotelsIds) {
+                this.dialog.open(PopupComponent, {
+                  data: "Thank you for booking! Our manager will contact you soon"
+                });
+                this.userService.bookingEvent.emit();
+              }
             }
           });
         }
@@ -123,7 +130,6 @@ export class SignInFormComponent implements OnInit {
     this.router.navigate(['/profile', data[0].id]);
     if (this.data && this.data.orderedHotelsIds) {
       this.dialog.open(PopupComponent, {
-        width: '500px',
         data: "Thank you for booking! Our manager will contact you soon"
       });
       this.userService.bookingEvent.emit();
@@ -144,7 +150,6 @@ export class SignInFormComponent implements OnInit {
 
   private openMessagePopup(message: string): void {
     this.dialog.open(PopupComponent, {
-        width: '500px',
         data: message
       }
     );

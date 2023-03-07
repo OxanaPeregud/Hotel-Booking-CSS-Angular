@@ -7,7 +7,6 @@ import {User} from "../shared/models/user";
 import {Router} from "@angular/router";
 import {HotelService} from "../services/hotel.service";
 import {Hotel} from "../shared/models/hotel";
-import {PopupComponent} from "../popup/popup.component";
 import {CartComponent} from "../cart/cart.component";
 
 @Component({
@@ -70,7 +69,6 @@ export class HeaderComponent implements OnInit {
 
   public openSignInForm(): void {
     this.dialog.open(SignInFormComponent, {
-      width: '500px',
       disableClose: true
     });
   }
@@ -96,7 +94,6 @@ export class HeaderComponent implements OnInit {
 
   public openCart(): void {
     this.dialog.open(CartComponent, {
-        width: '700px',
         data: {
           hotelsInCart: this.hotelsInCart,
           user: this.user

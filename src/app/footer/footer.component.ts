@@ -32,7 +32,8 @@ export class FooterComponent implements OnInit {
       'pattern': 'Email is not valid'
     },
     'feedback': {
-      'required': 'Feedback is required'
+      'required': 'Feedback is required',
+      'maxlength': 'Feedback must be less than 400 symbols',
     }
   };
 
@@ -51,7 +52,7 @@ export class FooterComponent implements OnInit {
     this.form = this.fb.group({
       name: [null, Validators.required],
       email: [null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
-      feedback: [null, Validators.required],
+      feedback: [Validators.required, Validators.maxLength(400)],
     });
     this.form.valueChanges
       .subscribe(() =>
@@ -69,6 +70,7 @@ export class FooterComponent implements OnInit {
           this.feedbackService.saveFeedback(feedBack).subscribe(data => {
             if (data) {
               this.openMessagePopup('Thank you for your feedback!');
+              this.feedbackService.reviewAddEvent.emit();
             }
           });
         } else {
@@ -83,6 +85,7 @@ export class FooterComponent implements OnInit {
               this.feedbackService.saveFeedback(feedBack).subscribe(data => {
                 if (data) {
                   this.openMessagePopup('Thank you for your feedback!');
+                  this.feedbackService.reviewAddEvent.emit();
                 }
               });
             }
@@ -94,7 +97,6 @@ export class FooterComponent implements OnInit {
 
   public openMessagePopup(message: string): void {
     this.dialog.open(PopupComponent, {
-        width: '500px',
         data: message
       }
     );

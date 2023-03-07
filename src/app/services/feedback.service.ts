@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable, Output} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {baseURL} from "../shared/baseurl";
@@ -11,6 +11,7 @@ export class FeedbackService {
 
   private feedbackLink: string = baseURL + "feedback";
   private headers = {'content-type': 'application/json'};
+  @Output() reviewAddEvent = new EventEmitter<any>();
 
   constructor(private http: HttpClient) {
   }
