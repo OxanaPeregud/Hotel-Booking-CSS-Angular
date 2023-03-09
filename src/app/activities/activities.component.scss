@@ -14,7 +14,7 @@ h4 {
 }
 
 .act-container {
-  width: 1110px;
+  max-width: 1110px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -50,3 +50,57 @@ h4 {
   padding: 7px 22px;
   margin-top: 18px;
 }
+
+@media screen and (max-width: 1170px) {
+  .fourth {
+    display: none;
+  }
+
+  .act-content {
+    justify-self: center;
+  }
+
+  .act-container {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .third {
+    display: none;
+  }
+
+  .act-wrapper {
+    height: 420px;
+  }
+
+  h4 {
+    padding: 5% 0 5% 10%;
+  }
+
+  .act-container {
+    margin-left: -7%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .second {
+    display: none;
+  }
+
+  .act-wrapper {
+    justify-content: center;
+    height: 370px;
+  }
+
+  .act-container {
+    margin-left: -17%;
+  }
+
+  h4 {
+    padding: 5% 0 5% 10%;
+  }
+}
+

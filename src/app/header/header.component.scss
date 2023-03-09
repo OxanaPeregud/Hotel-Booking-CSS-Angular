@@ -199,29 +199,28 @@ button.mat-focus-indicator.mat-menu-item.ng-tns-c173-1 {
   .cart {
     margin-left: 3%;
   }
+}
 
-  @media screen and (max-width: 785px) {
-    form {
-      display: none;
-    }
-
-    .cart {
-      margin-left: 15%;
-    }
-
-    .right-contact {
-      display: none;
-    }
+@media screen and (max-width: 785px) {
+  form {
+    display: none;
   }
 
-  @media screen and (max-width: 450px) {
-    .logo {
-      display: none;
-    }
+  .cart {
+    margin-left: 15%;
+  }
 
-    .cart {
-      margin-left: 0;
-    }
+  .right-contact {
+    display: none;
   }
 }
 
+@media screen and (max-width: 450px) {
+  .logo {
+    display: none;
+  }
+
+  .cart {
+    margin-left: 0;
+  }
+}
