@@ -1,23 +1,21 @@
+@import '../../variables';
+
 .review-wrapper {
-  background-color: #F5FAFE;
+  background-color: $main-grey-color;
   padding-top: 40px;
   padding-bottom: 70px;
 }
 
 .review-wrapper h2 {
+  @include mainFont('Muli Bold', 36px, 45px);
   padding-bottom: 70px;
   text-align: center;
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 36px;
-  line-height: 45px;
   text-transform: uppercase;
   color: #333333;
 }
 
 .review-container p {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 12px;
-  line-height: 160%;
+  @include mainFont('Muli Regular', 12px, 160%);
   text-align: justify;
   color: #333333;
   width: 537px;
@@ -62,17 +60,13 @@
 }
 
 .avatar-name {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
-  color: #EC1F46;
+  @include mainFont('Muli Bold', 12px, 15px);
+  color: $main-red-color;
   margin-top: 9px;
 }
 
 .review-date {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 10px;
-  line-height: 13px;
+  @include mainFont('Muli Regular', 10px, 13px);
   color: #000000;
   margin-top: 10px;
   margin-bottom: 4px;

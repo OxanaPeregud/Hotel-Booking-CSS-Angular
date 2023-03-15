@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .profile-wrapper {
   width: 1110px;
   margin: 0 auto;
@@ -8,7 +10,7 @@
 }
 
 .profile-container {
-  background-color: #F5FAFE;
+  background-color: $main-grey-color;
 }
 
 img {
@@ -17,9 +19,7 @@ img {
 }
 
 p {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 18px;
-  line-height: 23px;
+  @include mainFont('Muli Bold', 18px, 23px);
   color: #0A223D;
   display: grid;
   grid-template-columns: 170px auto;
@@ -32,9 +32,7 @@ p span:first-child {
 }
 
 .view-btn {
-  font-family: 'Muli SemiBold', sans-serif;;
-  font-size: 18px;
-  line-height: 14px;
+  @include mainFont('Muli SemiBold', 18px, 14px);
   color: #FFFFFF;
   background-color: #0A223D;
   border-radius: 4px;
@@ -49,9 +47,7 @@ p span:first-child {
 }
 
 .update-btn {
-  font-family: 'Muli SemiBold', sans-serif;;
-  font-size: 18px;
-  line-height: 14px;
+  @include mainFont('Muli SemiBold', 18px, 14px);
   color: #0A223D;
   border: 1px solid #0A223D;
   border-radius: 4px;

@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .subscribe-container {
   width: 100%;
   height: 260px;
@@ -34,9 +36,7 @@
 }
 
 .subscribe-form mat-form-field {
-  font-family: 'Muli Light', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  @include mainFont('Muli Light', 14px, 18px);
   color: #0A223D;
   margin-left: 23px;
   margin-top: 2px;
@@ -47,11 +47,9 @@
 }
 
 .send span {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Bold', 12px, 15px);
   color: #FFFFFF;
-  background-color: #EC1F46;
+  background-color: $main-red-color;
   padding: 19px;
   align-self: center;
   border-radius: 0 4px 4px 0;
@@ -59,16 +57,12 @@
 }
 
 .subtitle {
-  font-family: 'Muli Light', sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+  @include mainFont('Muli Light', 24px, 30px);
   color: #FFFFFF;
 }
 
 .title {
-  font-family: 'Muli SemiBold', sans-serif;
-  font-size: 36px;
-  line-height: 45px;
+  @include mainFont('Muli SemiBold', 36px, 45px);
   text-transform: uppercase;
   color: #FFFFFF;
 }

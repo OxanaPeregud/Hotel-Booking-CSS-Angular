@@ -1,3 +1,5 @@
+@import '../../variables';
+
 mat-toolbar {
   background-color: #0A223D;
   height: 80px;
@@ -10,16 +12,14 @@ mat-toolbar {
 }
 
 mat-toolbar a {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  @include mainFont('Muli Bold', 14px, 18px);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0;
 }
 
 mat-toolbar a.active {
-  color: #EC1F46;
+  color: $main-red-color;
 }
 
 .logo-wrapper {
@@ -46,15 +46,13 @@ form {
   height: 40px;
   align-self: center;
   margin-left: 108px;
-  background-color: #F5FAFE;
+  background-color: $main-grey-color;
   border-radius: 6px;
   padding-left: 23px;
 }
 
 .search-form mat-label, .search-form mat-form-field {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Regular', 12px, 15px);
   color: #333333;
   margin-top: -2px;
 }
@@ -72,25 +70,23 @@ form {
 }
 
 .search-img {
-  background-color: #EC1F46;
+  background-color: $main-red-color;
   border-radius: 0 6px 6px 0;
   padding: 12px 25px;
   align-self: center;
 }
 
 .sign-in {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #F5FAFE;
+  @include mainFont('Muli Regular', 14px, 18px);
+  color: $main-grey-color;
   align-self: center;
-  background-color: #EC1F46;
+  background-color: $main-red-color;
   border-radius: 6px;
   padding: 12px 25px;
 }
 
 .contacts-wrapper {
-  background-color: #F5FAFE;
+  background-color: $main-grey-color;
 }
 
 .contact {
@@ -100,9 +96,7 @@ form {
 
 .contact span, .contact span a {
   align-self: center;
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 10px;
-  line-height: 13px;
+  @include mainFont('Muli Regular', 10px, 13px);
   color: #333333;
   text-decoration: none;
 }
@@ -130,9 +124,7 @@ form {
 
 .user-name {
   align-self: center;
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  @include mainFont('Muli Regular', 14px, 18px);
   color: #333333;
   margin-left: 18px;
 }

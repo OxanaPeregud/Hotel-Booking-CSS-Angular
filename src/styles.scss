@@ -3,10 +3,6 @@
 @import 'variables';
 @import '../node_modules/font-awesome/css/font-awesome';
 
-/*font-family: 'Luckiest Guy', cursive;
-font-family: 'Nunito', sans-serif;*/
-
-
 /* Reset CSS */
 
 html, body, div, span, applet, object, iframe,
@@ -121,7 +117,7 @@ body {
 }
 
 .logo span {
-  color: #EC1F46;
+  color: $main-red-color;
 }
 
 .mat-header-cell {

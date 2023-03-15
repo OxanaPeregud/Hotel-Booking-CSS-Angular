@@ -1,12 +1,12 @@
+@import '../../variables';
+
 .packages-wrapper {
-  background-color: #F5FAFE;
+  background-color: $main-grey-color;
   padding: 70px 0 70px 0;
 }
 
 .packages-wrapper h2 {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 36px;
-  line-height: 45px;
+  @include mainFont('Muli Bold', 36px, 45px);
   text-align: center;
   text-transform: uppercase;
   color: #333333;
@@ -31,27 +31,21 @@
 }
 
 .hotel-info-wrapper h4 {
-  font-family: 'Muli Bold', sans-serif;
+  @include mainFont('Muli Bold', 18px, 23px);
   font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
   color: #FFFFFF;
   margin-bottom: 27px;
 }
 
 .hotel-info-wrapper p {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 14px;
-  line-height: 160.6%;
+  @include mainFont('Muli Regular', 14px, 160.6%);
   color: #FFFFFF;
   margin-bottom: 34px;
   opacity: 0.9;
 }
 
 .hotel-info-wrapper span {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Regular', 12px, 15px);
   color: #FFFFFF;
   margin-left: 14px;
 }
@@ -71,9 +65,7 @@
 }
 
 .top-price {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  @include mainFont('Muli Regular', 14px, 18px);
   text-decoration-line: line-through;
   color: #FFFFFF;
   margin-bottom: 5px;
@@ -82,20 +74,16 @@
 }
 
 .bottom-price span {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+  @include mainFont('Muli Bold', 24px, 30px);
   color: #FFFFFF;
   margin-left: 0;
   vertical-align: sub;
 }
 
 .book-btn {
-  font-family: 'Nunito', sans-serif;
-  font-size: 14px;
-  line-height: 19px;
+  @include mainFont('Nunito', 14px, 19px);
   color: #FFFFFF;
-  background-color: #EC1F46;
+  background-color: $main-red-color;
   border-radius: 4px;
   padding: 11px 0;
   width: 120px;

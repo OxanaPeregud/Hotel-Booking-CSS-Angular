@@ -1,5 +1,7 @@
+@import '../../variables';
+
 .hotel-info-container {
-  background-color: #F5FAFE;
+  background-color: $main-grey-color;
   width: 100%;
   padding-bottom: 40px;
   border-bottom: 1px dashed #E0E0E0;
@@ -16,7 +18,7 @@
 }
 
 .filtered {
-  color: #EC1F46;
+  color: $main-red-color;
 }
 
 .booking-wrapper {
@@ -99,12 +101,10 @@
 }
 
 .other-options {
-  font-family: 'Nunito', sans-serif;
+  @include mainFont('Nunito', 14px, 19px);
   font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
   color: #FFFFFF;
-  background-color: #EC1F46;
+  background-color: $main-red-color;
   border-radius: 4px;
   width: 295px;
   padding: 13px 0;
@@ -141,25 +141,19 @@
 }
 
 .main-title {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+  @include mainFont('Muli Bold', 24px, 30px);
   color: #333333;
   margin-right: 14px;
   text-transform: uppercase;
 }
 
 .subtitle {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Regular', 12px, 15px);
   color: #333333;
 }
 
 .view-btn {
-  font-family: 'Muli SemiBold', sans-serif;;
-  font-size: 18px;
-  line-height: 14px;
+  @include mainFont('Muli SemiBold', 18px, 14px);
   color: #0A223D;
   border: 1px solid #0A223D;
   border-radius: 3px;
@@ -175,7 +169,7 @@
 }
 
 .hotel-title-right {
-  background: #EC1F46;
+  background: $main-red-color;
   border-radius: 4px;
   padding: 5px;
   text-align: center;
@@ -184,23 +178,17 @@
 }
 
 .hotel-title-right span:first-child {
-  font-family: 'Muli SemiBold', sans-serif;
-  font-size: 8px;
-  line-height: 10px;
+  @include mainFont('Muli SemiBold', 8px, 10px);
   color: #FFFFFF;
 }
 
 .hotel-title-right span:nth-child(3) {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  @include mainFont('Muli Bold', 14px, 18px);
   color: #FFFFFF;
 }
 
 .hotel-title-right span:last-child {
-  font-family: 'Muli SemiBold', sans-serif;
-  font-size: 12px;
-  line-height: 18px;
+  @include mainFont('Muli SemiBold', 12px, 18px);
   color: #FFFFFF;
 }
 

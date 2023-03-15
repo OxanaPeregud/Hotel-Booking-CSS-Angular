@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .main {
   width: 700px;
 }
@@ -32,13 +34,11 @@
 }
 
 mat-header-cell.mat-header-cell.cdk-header-cell, mat-cell.mat-cell.cdk-cell {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 20px;
+  @include mainFont('Muli Regular', 20px, 100%);
 }
 
 .total-price {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 20px;
+  @include mainFont('Muli Regular', 20px, 100%);
   font-weight: bold;
   padding-top: 30px;
 }
@@ -53,12 +53,10 @@ td.mat-footer-cell.cdk-footer-cell.cdk-column-price.mat-column-price.ng-star-ins
 }
 
 .book-btn {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #F5FAFE;
+  @include mainFont('Muli Regular', 14px, 18px);
+  color: $main-grey-color;
   align-self: center;
-  background-color: #EC1F46;
+  background-color: $main-red-color;
   border-radius: 6px;
   padding: 12px 25px;
   margin-top: 20px;

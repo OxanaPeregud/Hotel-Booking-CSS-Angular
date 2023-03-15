@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .footer-wrapper {
   background-color: #0A223D;
 }
@@ -17,21 +19,17 @@
 }
 
 .footer-logo span {
-  color: #EC1F46;
+  color: $main-red-color;
 }
 
 h4 {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 18px;
-  line-height: 23px;
+  @include mainFont('Muli Bold', 18px, 23px);
   color: #FFFFFF;
   text-transform: uppercase;
 }
 
 .categories a, .info a, .legal a, .contact-subtitle, .contact-info a {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 14px;
-  line-height: 160%;
+  @include mainFont('Muli Regular', 14px, 160%);
   color: #BDBDBD;
   text-decoration: none;
 }
@@ -122,9 +120,7 @@ mat-error {
 }
 
 mat-form-field {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Regular', 12px, 15px);
   color: #333333;
   padding-left: 23px;
   padding-right: 23px;
@@ -132,11 +128,9 @@ mat-form-field {
 }
 
 .send span {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Bold', 12px, 15px);
   color: #FFFFFF;
-  background-color: #EC1F46;
+  background-color: $main-red-color;
   padding: 18px 65px;
   border-radius: 4px;
   margin-left: -16px;
@@ -149,9 +143,7 @@ mat-form-field {
 }
 
 .required {
-  font-family: 'Muli Bold', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Bold', 12px, 15px);
   color: #E0E0E0;
 }
 
@@ -165,9 +157,7 @@ mat-form-field {
 }
 
 .left-bottom-links {
-  font-family: 'Muli Regular', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  @include mainFont('Muli Regular', 12px, 15px);
   color: #FFFFFF;
   opacity: 0.5;
 }
@@ -257,8 +247,7 @@ mat-form-field {
   }
 
   .contact-subtitle, .contact-info a {
-    font-size: 12px;
-    line-height: 100%;
+    @include mainFont('Muli Regular', 12px, 100%);
   }
 }
 
@@ -275,7 +264,6 @@ mat-form-field {
   }
 
   h4 {
-    font-size: 12px;
-    line-height: 16px;
+    @include mainFont('Muli Bold', 12px, 16px);
   }
 }

@@ -1,4 +1,28 @@
 {
-  "users": [],
-  "feedback": []
+  "users": [
+    {
+      "email": "test1@test.com",
+      "firstName": "Mike",
+      "password": "1111",
+      "id": 1
+    },
+    {
+      "email": "test2@test.com",
+      "firstName": "Irina",
+      "password": "1111",
+      "id": 2
+    }
+  ],
+  "feedback": [
+    {
+      "userId": 1,
+      "text": "It was a pleasure staying at this Brand new property, which is 5 minutes walking from the Mall. Marina is a nice hotel with excellent food and service. They offer complementary fruit, chocolates and coffee in the room. Breakfast is good and you can choose: Indian, continental, etc. Also the restaurant is very good and reasonably priced. Overall the experience was brilliant and enjoyed or weekend getaway a lot. I will definitely stay there again.",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "text": "The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown. They were extremely accommodating and allowed us to check in early at like 10am. The service was exceptional as well.",
+      "id": 2
+    }
+  ]
 }

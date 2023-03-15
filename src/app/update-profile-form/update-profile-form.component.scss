@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .main {
   width: 1000px;
 }
@@ -31,15 +33,13 @@ mat-icon:hover {
 }
 
 .send {
-  font-family: 'Muli Bold', sans-serif;
-  background-color: #EC1F46;
+  @include mainFont('Muli Bold', 14px, 18px);
+  background-color: $main-red-color;
   border-radius: 4px;
   height: 50px;
   margin: 20px 0 15px 22px;
   width: 120px;
   color: #FFFFFF;
-  font-size: 14px;
-  line-height: 18px;
 }
 
 @media screen and (max-width: 1300px) {

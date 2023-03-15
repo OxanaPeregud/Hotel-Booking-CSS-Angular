@@ -1,1 +1,9 @@
 $fa-font-path: '../node_modules/font-awesome/fonts';
+$main-red-color: #EC1F46;
+$main-grey-color: #F5FAFE;
+
+@mixin mainFont($font-family, $font-size, $line-height) {
+  font-family: $font-family, sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+}
