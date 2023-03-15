@@ -52,7 +52,7 @@ export class FooterComponent implements OnInit {
     this.form = this.fb.group({
       name: [null, Validators.required],
       email: [null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
-      feedback: [Validators.required, Validators.maxLength(400)],
+      feedback: [null, [Validators.required, Validators.maxLength(400)]],
     });
     this.form.valueChanges
       .subscribe(() =>

@@ -80,3 +80,44 @@ p span:first-child {
   vertical-align: middle;
   color: #0A223D;
 }
+
+.update-btn-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .profile-wrapper {
+    width: 90%;
+    grid-template-columns: 350px auto;
+    padding-left: 5%;
+  }
+
+  .update-btn {
+    grid-column: 2/span2;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-info {
+    padding-top: 5%;
+    padding-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile-info p {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3%;
+  }
+
+  .update-btn {
+    width: 90%;
+  }
+}

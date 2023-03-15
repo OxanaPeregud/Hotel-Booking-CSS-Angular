@@ -54,3 +54,23 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 700px) {
+  .main {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    width: 100%;
+  }
+
+  .sign-in-bottom {
+    flex-direction: column;
+  }
+
+  .send {
+    margin-bottom: 20px;
+  }
+}

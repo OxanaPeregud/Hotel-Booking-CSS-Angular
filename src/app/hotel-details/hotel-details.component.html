@@ -6,11 +6,11 @@
       <a *ngIf="activeTab != 1" mat-button (click)="setActiveTab(1)">Package Summery</a>
       <a *ngIf="activeTab == 2" mat-button class="active-tab" (click)="setActiveTab(2)">Hotel Information</a>
       <a *ngIf="activeTab != 2" mat-button (click)="setActiveTab(2)">Hotel Information</a>
-      <a mat-button>Rooms</a>
-      <a mat-button>Facilities & Activities</a>
-      <a mat-button>Dining & Entertainment</a>
-      <a mat-button>Reviews</a>
-      <a mat-button>Questions & Answers</a>
+      <a class="desktop-active" mat-button>Rooms</a>
+      <a class="desktop-active" mat-button>Facilities & Activities</a>
+      <a class="desktop-active" mat-button>Dining & Entertainment</a>
+      <a class="desktop-active" mat-button>Reviews</a>
+      <a class="desktop-active" mat-button>Questions & Answers</a>
     </div>
   </mat-toolbar>
 
@@ -69,7 +69,7 @@
 
   </div>
 
-  <div class="center" *ngIf="activeTab == 2">
+  <div class="center info-tab" *ngIf="activeTab == 2">
     <h2>Hotel information</h2>
     <div class="package-title">
       Hotel Details
@@ -170,7 +170,7 @@
 
     <div>
 
-      <div class="package-details bottom-details">
+      <div class="package-details bottom-details mobile-detail">
         <div class="package-column-left">
           <div class="package-item">
             <div class="package-subtitle">Meal Plan Available</div>

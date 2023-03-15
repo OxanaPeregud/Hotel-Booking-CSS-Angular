@@ -87,3 +87,34 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 850px) {
+  .review-container {
+    width: 90%;
+  }
+
+  .quotes-top-img {
+    display: none;
+  }
+
+  .quotes-bottom-img {
+    display: none;
+  }
+
+  .review-container p {
+    margin-top: 130px;
+  }
+
+  .review-wrapper h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .review-container {
+    width: 90%;
+    height: 100%;
+    padding-bottom: 20px;
+  }
+}
+
