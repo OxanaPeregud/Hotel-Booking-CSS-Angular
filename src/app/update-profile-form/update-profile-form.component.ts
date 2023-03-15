@@ -68,6 +68,7 @@ export class UpdateProfileFormComponent implements OnInit {
     this.user = this.form.value;
     this.user.password = this.data.password;
     this.user.image = this.data.image;
+    this.user.orderedHotelsIds = this.data.orderedHotelsIds;
     if (this.data && this.data.id) {
       this.userService.updateUser(this.user, this.data.id).subscribe(data => {
         if (data) {
