@@ -3,19 +3,19 @@
 
 
   <div class="avatar-wrapper">
-    <img *ngIf="!user || !user.image" class="avatar-img" src="../../assets/images/avatar/default-avatar.jpg"
+    <img title="Avatar" *ngIf="!user || !user.image" class="avatar-img" src="assets/images/avatar/default-avatar.jpg"
          alt="Avatar">
-    <img *ngIf="user && user.image" class="avatar-img" src={{user.image}} alt="Avatar">
+    <img title="Avatar" *ngIf="user && user.image" class="avatar-img" src={{user.image}} alt="Avatar">
 
-    <span class="avatar-name">{{user.firstName}}</span>
+    <span class="avatar-name">{{user?.firstName}}</span>
     <span class="review-date">Stayed 18 Nov, 2019</span>
-    <img src="assets/images/stars.svg" alt="Stars">
+    <img title="Stars" src="assets/images/stars.svg" alt="Stars">
   </div>
 
   <div class="review-container">
 
-    <img class="quotes-top-img" src="assets/images/quotes-top.svg" alt="Quotes">
-    <img class="quotes-bottom-img" src="assets/images/quotes-bottom.svg" alt="Quotes">
+    <img title="Quotes" class="quotes-top-img" src="assets/images/quotes-top.svg" alt="Quotes">
+    <img title="Quotes" class="quotes-bottom-img" src="assets/images/quotes-bottom.svg" alt="Quotes">
 
     <div class="text-content">
 

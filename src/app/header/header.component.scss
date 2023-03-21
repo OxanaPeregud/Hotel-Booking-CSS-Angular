@@ -18,6 +18,10 @@ mat-toolbar a {
   padding: 0;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 mat-toolbar a.active {
   color: $main-red-color;
 }

@@ -8,6 +8,7 @@ import {Router} from "@angular/router";
 import {HotelService} from "../services/hotel.service";
 import {Hotel} from "../shared/models/hotel";
 import {CartComponent} from "../cart/cart.component";
+import {PopupComponent} from "../popup/popup.component";
 
 @Component({
   selector: 'app-header',
@@ -101,5 +102,15 @@ export class HeaderComponent implements OnInit {
         disableClose: true
       }
     );
+  }
+
+  public goHome(): void {
+    this.router.navigate(['/home']);
+  }
+
+  public openMessagePopup(): void {
+    this.dialog.open(PopupComponent, {
+        data: "Cart is empty"
+      });
   }
 }

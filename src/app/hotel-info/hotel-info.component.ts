@@ -4,6 +4,7 @@ import {HotelService} from "../services/hotel.service";
 import {Hotel} from "../shared/models/hotel";
 import {PopupComponent} from "../popup/popup.component";
 import {MatDialog} from "@angular/material/dialog";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-hotel-info',
@@ -20,6 +21,7 @@ export class HotelInfoComponent implements OnInit {
   @Input() public isProfile: boolean = false;
 
   constructor(private hotelService: HotelService,
+              private userService: UserService,
               private dialog: MatDialog) {
   }
 
@@ -40,6 +42,11 @@ export class HotelInfoComponent implements OnInit {
         this.hotels = [];
       }
     }
+    this.userService.bookingEvent
+      .subscribe(() => {
+        this.hotelsInCart = [];
+        this.isInCard(undefined);
+      });
   }
 
   public setViewDetails(hotelId: number | undefined, view: boolean): void {

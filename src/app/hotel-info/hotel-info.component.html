@@ -31,7 +31,7 @@
 
     <div class="center hotel-items">
       <div>
-        <img class="main-hotel-img" src={{hotel.image}} alt="Hotel" width="728" height="450">
+        <img title="Hotel" class="main-hotel-img" src={{hotel.image}} alt="Hotel" width="728" height="450">
       </div>
 
       <div class="flex-booking">
@@ -45,28 +45,32 @@
             </div>
             <div class="booking-items-right">
               <div class="user">
-                <img src="assets/images/avatar/user.svg" alt="User">
+                <img title="User" src="assets/images/avatar/user.svg" alt="User">
                 <span>2 x Guests</span>
               </div>
               <div class="home">
-                <img src="assets/images/home.svg" alt="Home">
+                <img title="Home" src="assets/images/home.svg" alt="Home">
                 <span>1 x Room</span>
               </div>
               <div class="phone">
-                <img src="assets/images/phone-call.svg" alt="Phone">
-                <span><a href="tel:12100">12100</a></span>
+                <img title="Phone" src="assets/images/phone-call.svg" alt="Phone">
+                <span><a title="Tel" href="tel:12100">12100</a></span>
               </div>
             </div>
           </div>
           <div>
-            <a *ngIf="!isInCard(hotel)" class="other-options" mat-button (click)="addToCart(hotel)">Add to Cart</a>
-            <a *ngIf="isInCard(hotel)" class="other-options" mat-button (click)="removeFromCart(hotel)">Remove from Cart</a>
+            <a title="Button" *ngIf="!isInCard(hotel)" class="other-options" mat-button (click)="addToCart(hotel)">Add to Cart</a>
+            <a title="Button" *ngIf="isInCard(hotel)" class="other-options" mat-button (click)="removeFromCart(hotel)">Remove from
+              Cart</a>
           </div>
         </div>
 
         <div class="map-item">
-          <a href="https://goo.gl/maps/H8nFgNR1ij8q5cAn8" target="_blank">
-            <img src="assets/images/map.png" alt="Map">
+          <a title="Map" href="https://goo.gl/maps/H8nFgNR1ij8q5cAn8" target="_blank">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.20651899345!2d99.68327290788426!3d6.3673141059313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304c7702fcfbd8af%3A0x4dfec21834efe3c2!2sThe%20Danna%20Langkawi!5e0!3m2!1sen!2sby!4v1679415596442!5m2!1sen!2sby"
+              width="347" height="213" style="border: 0" allowfullscreen>
+            </iframe>
           </a>
         </div>
 
@@ -77,11 +81,11 @@
   </div>
 
   <div>
-    <a *ngIf="!containsViewId(hotel.id)" class="view-btn" mat-button
+    <a title="Button" *ngIf="!containsViewId(hotel.id)" class="view-btn" mat-button
        (click)="setViewDetails(hotel.id, true)">
       View details<span>&rarr;</span>
     </a>
-    <a *ngIf="containsViewId(hotel.id)" class="view-btn" mat-button
+    <a title="Button" *ngIf="containsViewId(hotel.id)" class="view-btn" mat-button
        (click)="setViewDetails(hotel.id, false)">
       Hide details<span>&darr;</span>
     </a>

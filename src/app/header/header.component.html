@@ -1,18 +1,18 @@
 <div class="contacts-wrapper">
   <div class="contact center">
     <span>Questions? Need Help?</span>
-    <span><a href="tel:+123-456-1500">Call us on (+123) 456 1500</a></span>
+    <span><a title="Tel" href="tel:+123-456-1500">Call us on (+123) 456 1500</a></span>
     <span class="flex-spacer"></span>
-    <img class="right-contact" src="assets/images/gift.svg" alt="Gift">
-    <span class="right-contact"><a href="#">BTP Gift Card</a></span>
-    <img class="right-contact" src="assets/images/star.svg" alt="Star">
-    <span class="right-contact"><a href="#">Loyalty Program</a></span>
+    <img title="Gift" class="right-contact" src="assets/images/gift.svg" alt="Gift">
+    <span class="right-contact"><a title="Card" href="#">BTP Gift Card</a></span>
+    <img title="Star" class="right-contact" src="assets/images/star.svg" alt="Star">
+    <span class="right-contact"><a title="Program" href="#">Loyalty Program</a></span>
   </div>
 </div>
 
 <div class="logo-wrapper">
   <div class="header-logo center">
-    <div class="logo">
+    <div class="logo" (click)="goHome()">
       Best <span>tour</span> plan
     </div>
 
@@ -25,22 +25,22 @@
 
       </div>
 
-      <a mat-button class="search-img" (click)="search()">
-        <img src="assets/images/search.svg" width="16" height="16" alt="Search">
+      <a title="Search" mat-button class="search-img" (click)="search()">
+        <img title="Search" src="assets/images/search.svg" width="16" height="16" alt="Search">
       </a>
     </form>
 
-    <a mat-button class="cart">
+    <a title="Cart" mat-button class="cart">
       <mat-icon *ngIf="hotelsInCart.length != 0" matBadge={{hotelsInCart.length}} matBadgeColor="warn"
                 (click)="openCart()">shopping_cart
       </mat-icon>
-      <mat-icon *ngIf="hotelsInCart.length == 0">shopping_cart</mat-icon>
+      <mat-icon *ngIf="hotelsInCart.length == 0" (click)="openMessagePopup()">shopping_cart</mat-icon>
     </a>
     <span class="flex-spacer"></span>
 
-    <a *ngIf="!user" class="sign-in" mat-button (click)="openSignInForm()">Sign in</a>
-    <img class="user-image" *ngIf="user && user.image" src={{user.image}} alt="Avatar" width="40" height="40">
-    <img class="user-image" *ngIf="user && !user?.image" src="assets/images/avatar/default-avatar.jpg" alt="Avatar"
+    <a title="Sign in" *ngIf="!user" class="sign-in" mat-button (click)="openSignInForm()">Sign in</a>
+    <img title="User" class="user-image" *ngIf="user && user.image" src={{user.image}} alt="Avatar" width="40" height="40">
+    <img title="User" class="user-image" *ngIf="user && !user?.image" src="assets/images/avatar/default-avatar.jpg" alt="Avatar"
          width="40" height="40">
     <span *ngIf="user" class="user-name">{{user.firstName}}</span>
     <span *ngIf="user" class="drop-icon" [matMenuTriggerFor]="menu"><mat-icon
@@ -55,13 +55,13 @@
 
 <mat-toolbar>
   <div class="center toolbar">
-    <a mat-button routerLink='/home' routerLinkActive='active'>All Deals</a>
-    <a mat-button routerLink='/hotels' routerLinkActive='active'>Hotels</a>
-    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Activities</a>
-    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Hotel Day Packages</a>
-    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Restaurants</a>
-    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Events</a>
-    <a class="not-active" mat-button routerLink='#' routerLinkActive='active'>Rodrigues</a>
+    <a title="Button" mat-button routerLink='/home' routerLinkActive='active'>All Deals</a>
+    <a title="Button" mat-button routerLink='/hotels' routerLinkActive='active'>Hotels</a>
+    <a title="Button" class="not-active" mat-button routerLink='#' routerLinkActive='active'>Activities</a>
+    <a title="Button" class="not-active" mat-button routerLink='#' routerLinkActive='active'>Hotel Day Packages</a>
+    <a title="Button" class="not-active" mat-button routerLink='#' routerLinkActive='active'>Restaurants</a>
+    <a title="Button" class="not-active" mat-button routerLink='#' routerLinkActive='active'>Events</a>
+    <a title="Button" class="not-active" mat-button routerLink='#' routerLinkActive='active'>Rodrigues</a>
 
     <mat-icon [matMenuTriggerFor]="main" class="menu">menu</mat-icon>
     <mat-menu #main="matMenu">
